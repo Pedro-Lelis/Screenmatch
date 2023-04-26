@@ -4,6 +4,8 @@ import br.com.pedrolelis.screenmatch.modelos.Episodio;
 import br.com.pedrolelis.screenmatch.modelos.Filme;
 import br.com.pedrolelis.screenmatch.modelos.Serie;
 
+import java.util.ArrayList;
+
 public class Principal {
     public static void main(String[] args) {
         Filme meuFilme = new Filme();
@@ -50,6 +52,19 @@ public class Principal {
         episodio.setTotalVisualizacoes(300);
         filtro.filtra(episodio);
 
+        var filmeDoPedro = new Filme();
+        filmeDoPedro.setDuracaoEmMinutos(200);
+        filmeDoPedro.setNome("Dogville");
+        filmeDoPedro.setAnoDelancamento(2003);
+        filmeDoPedro.avalia(10);
+
+        ArrayList<Filme> listaDeFilmes = new ArrayList<Filme>();
+        listaDeFilmes.add(filmeDoPedro);
+        listaDeFilmes.add(meuFilme);
+        listaDeFilmes.add(outroFilme);
+        System.out.println("Tamanho da lista: " + listaDeFilmes.size());
+        System.out.println("Primeiro filme: " + listaDeFilmes.get(0).getNome());
+        System.out.println(listaDeFilmes);
 
     }
 }
