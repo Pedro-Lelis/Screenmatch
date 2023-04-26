@@ -8,8 +8,7 @@ import java.util.ArrayList;
 
 public class Principal {
     public static void main(String[] args) {
-        Filme meuFilme = new Filme();
-        meuFilme.setNome("O poderoso chefão");
+        Filme meuFilme = new Filme("O poderoso chefão");
         meuFilme.setAnoDelancamento(1970);
         meuFilme.setDuracaoEmMinutos(180);
 
@@ -31,8 +30,7 @@ public class Principal {
         lost.setMinutosPorEpisodio(50);
         System.out.println("Duração para maratonar lost: " + lost.getDuracaoEmMinutos());
 
-        Filme outroFilme = new Filme();
-        outroFilme.setNome("Avatar");
+        Filme outroFilme = new Filme("Avatar");
         outroFilme.setAnoDelancamento(2023);
         outroFilme.setDuracaoEmMinutos(200);
 
@@ -52,13 +50,12 @@ public class Principal {
         episodio.setTotalVisualizacoes(300);
         filtro.filtra(episodio);
 
-        var filmeDoPedro = new Filme();
+        var filmeDoPedro = new Filme("Dogville");
         filmeDoPedro.setDuracaoEmMinutos(200);
-        filmeDoPedro.setNome("Dogville");
         filmeDoPedro.setAnoDelancamento(2003);
         filmeDoPedro.avalia(10);
 
-        ArrayList<Filme> listaDeFilmes = new ArrayList<Filme>();
+        ArrayList<Filme> listaDeFilmes = new ArrayList<>();
         listaDeFilmes.add(filmeDoPedro);
         listaDeFilmes.add(meuFilme);
         listaDeFilmes.add(outroFilme);
