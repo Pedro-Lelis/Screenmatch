@@ -3,18 +3,23 @@ package br.com.pedrolelis.screenmatch.modelos;
 public class Titulo {
 
     private String nome;
-    private int anoDelancamento;
+    private int anoDeLancamento;
     private boolean incluidoNoPlano;
     private double somaDasAvaliacoes;
     private int totalDeAvaliacao;
     private int duracaoEmMinutos;
 
+    public Titulo(String nome, int anoDelancamento) {
+        this.nome = nome;
+        this.anoDeLancamento = anoDelancamento;
+    }
+
     public String getNome() {
         return nome;
     }
 
-    public int getAnoDelancamento() {
-        return anoDelancamento;
+    public int getAnoDeLancamento() {
+        return anoDeLancamento;
     }
 
     public boolean isIncluidoNoPlano() {
@@ -33,8 +38,8 @@ public class Titulo {
         this.nome = nome;
     }
 
-    public void setAnoDelancamento(int anoDelancamento) {
-        this.anoDelancamento = anoDelancamento;
+    public void setAnoDeLancamento(int anoDeLancamento) {
+        this.anoDeLancamento = anoDeLancamento;
     }
 
     public void setIncluidoNoPlano(boolean incluidoNoPlano) {
@@ -47,7 +52,7 @@ public class Titulo {
 
     public void exibeFichaTecnica(){
         System.out.println("Nome do titulo: " + nome);
-        System.out.println("Ano de lançamento: " + anoDelancamento);
+        System.out.println("Ano de lançamento: " + anoDeLancamento);
     }
 
     public void avalia(double nota){

@@ -5,8 +5,8 @@ import br.com.pedrolelis.screenmatch.calculos.Classificavel;
 public class Filme extends Titulo implements Classificavel {
     private String diretor;
 
-    public Filme(String nome){
-        this.setNome(nome);
+    public Filme(String nome, int anoDeLancamento){
+        super(nome, anoDeLancamento);
     }
 
     public String getDiretor() {
@@ -24,6 +24,6 @@ public class Filme extends Titulo implements Classificavel {
 
     @Override
     public String toString() {
-        return "Filme: " + this.getNome() + "(" + this.getAnoDelancamento() + ")";
+        return "Filme: " + this.getNome() + "(" + this.getAnoDeLancamento() + ")";
     }
 }
