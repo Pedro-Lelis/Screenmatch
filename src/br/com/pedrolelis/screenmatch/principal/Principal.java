@@ -1,3 +1,5 @@
+package br.com.pedrolelis.screenmatch.principal;
+
 import br.com.pedrolelis.screenmatch.calculos.CalculadoraDeTempo;
 import br.com.pedrolelis.screenmatch.calculos.FiltroRecomendacao;
 import br.com.pedrolelis.screenmatch.modelos.Episodio;
