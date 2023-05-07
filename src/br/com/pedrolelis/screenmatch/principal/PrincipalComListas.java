@@ -4,9 +4,7 @@ import br.com.pedrolelis.screenmatch.modelos.Filme;
 import br.com.pedrolelis.screenmatch.modelos.Serie;
 import br.com.pedrolelis.screenmatch.modelos.Titulo;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
+import java.util.*;
 
 public class PrincipalComListas {
     public static void main(String[] args) {
@@ -30,7 +28,7 @@ public class PrincipalComListas {
             }
         }
 
-        ArrayList<String> buscaPorArtista = new ArrayList<>();
+        List<String> buscaPorArtista = new ArrayList<>();
         buscaPorArtista.add("Adam Sandler");
         buscaPorArtista.add("Pedro");
         buscaPorArtista.add("Fulano");
@@ -41,6 +39,9 @@ public class PrincipalComListas {
 
         System.out.println("Lista de titulos ordenados:");
         Collections.sort(lista);
+        System.out.println(lista);
+        System.out.println("rsrs");
+        lista.sort(Comparator.comparing(Titulo::getAnoDeLancamento));
         System.out.println(lista);
 
     }
